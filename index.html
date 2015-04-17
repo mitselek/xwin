@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Xwin by mitselek</title>
   </head>
-    <body style="background-color: white;">
+    <body style="background-color: wheat;">
         <h1>frame1</h1>
         <div id="test">Send me a message!</div>
         <script>
@@ -16,7 +16,7 @@
                     return
                 }
                 console.log(event.data)
-                document.getElementById("test").innerHTML = "received: " + event.data.command
+                document.getElementById("test").innerHTML = "received: " + event.data
             }
 
             addEventListener("message", listener, false)
