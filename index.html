@@ -9,7 +9,7 @@
         <div id="test">Send me a message!</div>
         <script>
             function listener(event) {
-                console.log('event happened')
+                console.log('event happened: ' + event.data + ' from ' + event.origin)
                 if ( event.origin !== "file://" ) {
                     document.getElementById("test").innerHTML = 'Wrong origin: ' + event.origin
                     console.log('Wrong origin: ' + event.origin)
