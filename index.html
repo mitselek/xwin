@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <title>Xwin by mitselek</title>
   </head>
-    <body style="background-color: yellow;">
+    <body style="background-color: red;">
         <h1>frame1</h1>
         <div id="test">Send me a message!</div>
         <script>
             function listener(event) {
-                console.log('event happened: ' + event.data + ' from ' + event.origin)
+                console.log('event happened from ' + event.origin)
                 if ( event.origin !== "file://" ) {
                     document.getElementById("test").innerHTML = 'Wrong origin: ' + event.origin
                     console.log('Wrong origin: ' + event.origin)
                     return
                 }
+                console.log(event.data)
                 document.getElementById("test").innerHTML = "received: " + event.data
             }
 
